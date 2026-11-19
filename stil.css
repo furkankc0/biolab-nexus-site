@@ -50,6 +50,11 @@ p{margin:0 0 1em}
 .nav-tel nav{position:absolute;right:0;top:calc(100% + 8px);background:var(--gece2);border:1px solid var(--gece-line);border-radius:14px;padding:6px;display:flex;flex-direction:column;min-width:220px;box-shadow:0 16px 40px rgba(0,0,0,.4)}
 .nav-tel nav a{padding:12px 14px;color:var(--gece-ink);text-decoration:none;font-weight:700;border-radius:10px}
 .nav-tel nav a[aria-current="page"]{background:rgba(242,182,79,.16);color:var(--amber)}
+/* dil seçici: üst çubukta öbür dildeki aynı sayfa; telefonda menünün en altında */
+.dil-secici{display:flex}
+.dil{color:var(--gece-sub);text-decoration:none;font-weight:700;font-size:14.5px;padding:6px 13px;border:1px solid #3B5F57;border-radius:999px}
+.dil:hover{color:var(--gece-ink);border-color:var(--gece-sub)}
+.nav-tel nav a[hreflang]{border-top:1px solid var(--gece-line);border-radius:0 0 10px 10px;margin-top:4px;color:var(--gece-sub)}
 
 /* düğmeler */
 .dugmeler{display:flex;flex-wrap:wrap;gap:12px}
@@ -98,11 +103,11 @@ p{margin:0 0 1em}
 .sonuc-alt{margin:0;font-size:14.5px;color:var(--gece-sub);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
 .sonuc-alt b{font-family:var(--display);font-size:22px;color:var(--mint)}
 .sonuc-alt span{background:rgba(127,211,179,.14);color:var(--mint);border-radius:999px;padding:2px 10px;font-weight:700;font-size:13px}
-.sahne-tekrar{position:absolute;right:0;top:-12px;background:transparent;border:1px solid #3B5F57;color:var(--gece-sub);border-radius:999px;padding:6px 14px;font:700 13px var(--ui);cursor:pointer}
-.sahne-tekrar:hover{color:var(--gece-ink);border-color:var(--gece-sub)}
 
-/* sahnenin zamanlaması (yaklaşık 7 saniye, bir kez) */
+/* sahnenin zamanlaması: yaklaşık 7 saniye sürer; betik birkaç saniye bekleyip sahneyi söndürür ve baştan oynatır */
 .sahne.bekle{visibility:hidden}
+.sahne{transition:opacity .6s ease}
+.sahne.sondur{opacity:0}
 .i0{--i:0}.i1{--i:1}.i2{--i:2}.i3{--i:3}.i4{--i:4}.i5{--i:5}
 .oyna .s-plaka{animation:sGir .8s cubic-bezier(.2,.8,.2,1) both;transform-origin:250px 236px}
 .oyna .s-not1{animation:sBelir .6s .3s both}
@@ -237,7 +242,7 @@ code{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
 /* telefon */
 @media (max-width:720px){
  body{font-size:16.5px}
- .nav{display:none}.nav-tel{display:block}
+ .nav,.dil-secici{display:none}.nav-tel{display:block}
  .ust-ic{min-height:60px;gap:12px}
  .marka{font-size:18px}.logo{width:32px;height:32px}
  .hero{padding:30px 0 44px}
@@ -258,6 +263,6 @@ code{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace}
 /* hareketi azalt: sahne doğrudan son haliyle görünür, geçişler kapanır */
 @media (prefers-reduced-motion:reduce){
  .sahne *,.sahne{animation:none!important}
- .pencere-ekran img,.js .alan,.dugme{transition:none!important}
+ .sahne,.pencere-ekran img,.js .alan,.dugme{transition:none!important}
  @view-transition{navigation:none}
 }
