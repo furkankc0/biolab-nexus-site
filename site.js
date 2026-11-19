@@ -1,6 +1,6 @@
 /* © 2026 Furkan Koç. Tüm hakları saklıdır. BioLab Nexus sitesi.
-   Yalnız iki küçük iş: giriş sahnesini aralıklarla baştan oynatma ve “Ne işe yarar?” bölümünde kaydırdıkça ekran görüntüsünü
-   değiştirme. Hiçbir veri toplamaz, hiçbir yere istek göndermez. Betik çalışmazsa sayfa yine eksiksiz görünür (sahne bir kez oynar). */
+   Yalnız küçük işler: giriş sahnesini aralıklarla baştan oynatma, “Ne işe yarar?” bölümünde kaydırdıkça ekran görüntüsünü
+   değiştirme ve açılır kutuları dışarı tıklanınca kapatma. Hiçbir veri toplamaz, hiçbir yere istek göndermez. Betik çalışmazsa sayfa yine eksiksiz görünür (sahne bir kez oynar). */
 'use strict';
 (() => {
   document.documentElement.classList.add('js');
@@ -50,7 +50,22 @@
     }
   };
 
+  // Açılır kutular (dil seçici, telefon menüsü): dışarı tıklanınca ya da Esc'e basılınca kapanır; biri açılınca öbürü kapanır.
+  const acilirlariKur = () => {
+    const kutular = [...document.querySelectorAll('.dil-secici, .nav-tel')];
+    for (const k of kutular) k.addEventListener('toggle', () => { if (k.open) kutular.forEach(o => { if (o !== k) o.open = false; }); });
+    document.addEventListener('click', e => { for (const k of kutular) if (k.open && !k.contains(e.target)) k.open = false; });
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      for (const k of kutular) if (k.open) { k.open = false; k.querySelector('summary').focus(); }
+    });
+    // Kurulum seçenekleri: aynı anda tek kart açık (tarayıcı name="" özelliğini bilmiyorsa)
+    const kartlar = [...document.querySelectorAll('details.secenek')];
+    for (const k of kartlar) k.addEventListener('toggle', () => { if (k.open) kartlar.forEach(o => { if (o !== k && o.open) o.open = false; }); });
+  };
+
   ready(() => {
+    acilirlariKur();
     const sahne = document.querySelector('.sahne');
     if (sahne) sahneyiKur(sahne);
     const hikaye = document.querySelector('.hikaye');
