@@ -4,6 +4,10 @@
 'use strict';
 (() => {
   document.documentElement.classList.add('js');
+  // Sayfa yenilenince en başa dönülür (tarayıcılar varsayılan olarak eski kaydırma yerine geri döner;
+  // giriş sahnesi de görünmeden oynamış olurdu). Adreste #bölüm varsa tarayıcı oraya gider.
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (_) { /* eski tarayıcı */ }
+  if (!location.hash) window.scrollTo(0, 0);
   const ready = fn => (document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn());
   ready(() => {
     const sahne = document.querySelector('.sahne'), tekrar = document.querySelector('.sahne-tekrar');
