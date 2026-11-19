@@ -1,4 +1,4 @@
-/* © 2026 Furkan Koç. Tüm hakları saklıdır. BioLab Nexus sitesi. Programla aynı kimlik: “Plaka” (açık), “Gece vardiyası” (koyu). */
+/* © 2026 Furkan Koç. Tüm hakları saklıdır. HMZ Lab sitesi. Programla aynı kimlik: “Plaka” (açık), “Gece vardiyası” (koyu). */
 @font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:400;font-display:swap;src:url(atkinson-hyperlegible-next-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:400;font-display:swap;src:url(atkinson-hyperlegible-next-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Atkinson Hyperlegible Next";font-style:normal;font-weight:700;font-display:swap;src:url(atkinson-hyperlegible-next-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -39,7 +39,7 @@ p{margin:0 0 1em}
 .ust{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--gece) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--gece-line);color:var(--gece-ink)}
 .ust-ic{display:flex;align-items:center;gap:24px;min-height:68px}
 .marka{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;color:var(--gece-ink);text-decoration:none;margin-right:auto}
-.logo{width:36px;height:36px;padding:6px;border-radius:10px;background:rgba(242,182,79,.14);fill:none;stroke:var(--amber);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.logo{width:36px;height:36px;flex:none}
 .nav{display:flex;gap:4px}
 .nav a{color:var(--gece-ink);text-decoration:none;font-weight:700;font-size:15.5px;padding:8px 14px;border-radius:10px}
 .nav a:hover{background:rgba(255,255,255,.07)}

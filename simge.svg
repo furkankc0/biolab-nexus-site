@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
- <defs>
-  <linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24835F"/><stop offset="1" stop-color="#124A3A"/></linearGradient>
-  <radialGradient id="g" cx=".4" cy=".36" r=".72"><stop offset="0" stop-color="#FAD685"/><stop offset=".72" stop-color="#EDB04A"/><stop offset="1" stop-color="#DC9930"/></radialGradient>
- </defs>
- <rect width="512" height="512" rx="112" fill="url(#t)"/>
- <circle cx="256" cy="266" r="194" fill="#0A3328" opacity=".32"/>
- <circle cx="256" cy="256" r="190" fill="#EEF5F1"/>
- <circle cx="256" cy="256" r="178" fill="none" stroke="#C9DCD3" stroke-width="3"/>
- <circle cx="256" cy="256" r="166" fill="url(#g)"/>
- <path d="M128 196A140 140 0 0 1 196 128" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="14" stroke-linecap="round"/>
- <path d="M186 338V176L326 336V174" fill="none" stroke="#11493A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
- <g fill="#FFF8E8" stroke="#11493A" stroke-width="7">
-  <circle cx="186" cy="176" r="27"/><circle cx="186" cy="338" r="23"/><circle cx="326" cy="336" r="29"/><circle cx="326" cy="174" r="21"/>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24835F"/><stop offset="1" stop-color="#124A3A"/></linearGradient><radialGradient id="g" cx=".4" cy=".36" r=".72"><stop offset="0" stop-color="#FAD685"/><stop offset=".72" stop-color="#EDB04A"/><stop offset="1" stop-color="#DC9930"/></radialGradient></defs><rect width="512" height="512" rx="112" fill="url(#t)"/><circle cx="256" cy="266" r="226" fill="#0A3328" opacity=".3"/><circle cx="256" cy="256" r="222" fill="#EEF5F1"/><circle cx="256" cy="256" r="200" fill="url(#g)"/><path d="M104 200A170 170 0 0 1 200 104" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="14" stroke-linecap="round"/><path fill="#11493A" transform="translate(77.17 313.81) scale(0.15701)" d="M499 0V-660H660V0ZM69 0V-660H230V0ZM167 -268V-398H564V-268ZM789 0V-660H1030L1202 -185H1207L1375 -660H1605V0H1453L1462 -496H1451L1260 0H1128L941 -496H930L939 0ZM1698 0V-152L2020 -514V-526H1708V-660H2196V-495L1885 -145V-134H2209V0Z"/><g fill="#FFF8E8" stroke="#11493A" stroke-width="6"><circle cx="186" cy="146" r="14"/><circle cx="338" cy="380" r="17"/><circle cx="360" cy="156" r="10"/></g></svg>

@@ -1,4 +1,4 @@
-BioLab Nexus arayüz yazı tipleri. İkisi de SIL Open Font License 1.1 ile dağıtılır.
+HMZ Lab arayüz yazı tipleri. İkisi de SIL Open Font License 1.1 ile dağıtılır.
 
 == Atkinson Hyperlegible Next ==
 Copyright 2020-2024 The Atkinson Hyperlegible Next Project Authors (https://github.com/googlefonts/atkinson-hyperlegible-next) AtkinsonHyperlegibleNext-Italic[wght].ttf: Copyright 2020-2024 The Atkinson Hyperlegible Next Project Authors (https://github.com/googlefonts/atkinson-hyperlegible-next)

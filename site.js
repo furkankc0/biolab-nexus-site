@@ -1,4 +1,4 @@
-/* © 2026 Furkan Koç. Tüm hakları saklıdır. BioLab Nexus sitesi.
+/* © 2026 Furkan Koç. Tüm hakları saklıdır. HMZ Lab sitesi.
    Yalnız küçük işler: giriş sahnesini aralıklarla baştan oynatma, “Ne işe yarar?” bölümünde kaydırdıkça ekran görüntüsünü
    değiştirme ve açılır kutuları dışarı tıklanınca kapatma. Hiçbir veri toplamaz, hiçbir yere istek göndermez. Betik çalışmazsa sayfa yine eksiksiz görünür (sahne bir kez oynar). */
 'use strict';
